@@ -1,0 +1,82 @@
+1. Arrays:
+  - Fixed-size collections of elements with a uniform data type.
+  - Syntax: `let my_array: [i32; 5] = [1, 2, 3, 4, 5];`
+
+2. Vectors:
+  - Dynamic arrays that can grow or shrink in size.
+  - Syntax: `let my_vector: Vec<i32> = vec![1, 2, 3, 4, 5];`
+
+3. Strings:
+  - UTF-8 encoded sequences of Unicode characters.
+  - Syntax `let my_string: &str = "Hellow, World";`
+
+4. Slices:
+  - Non-owning references to a contiguous sequnce of elements.
+  - Syntax: `let my_slice: &[i32] = &my_array[1..3];`
+
+5. Tuples:
+  - Fixed-size, orderd collections of elements with different data types.
+  - Syntax: `let my_tuple: (i32, f64, &str) = (2, 3.14, "rust");`
+
+6. Enums:
+  - Custom data types that can have mulitple variants.
+  - Example:
+    enum Status {
+      Success,
+      Failure(String),
+    }
+
+7. Options:
+  - Popular type of Enum
+  - Represents either a value (`Some`) or no value (`None`).  
+  - Example: `let result: Option<i32> = Some(42);`
+
+8. Results:
+  - Popular type of Enum
+  - Represents either a succesful result (`Ok`) or an error (`Err`).
+  - Example: `let result: Result<i32, &str> = Ok(42);`
+
+9. Hash Maps:
+  - Unodered collections of key-value pairs.
+  - Example:
+    use std:collections::HashMap;
+    let mut my_map = HashMap::new();
+    my_map.insert("key", "value");
+
+10. Sets:
+  - Unodered collections of unique elements.
+  - Example:
+    use std:collections:HashSet;
+    let mut my_set = HashSet::new();
+    my_set.insert(1);
+
+11. LinkedList:
+  - Doubly-linked lists where each element has references to the next
+  and previous elements.
+  - Example: `let my_linked_list: LinkedList<i32> = LinkedList::new();`
+
+12. Binary Heap (from `std::collections`):
+  - Priority queues implemented as binary heaps.
+  - Example:
+    use std::collections::BinaryHeap;
+    let mut my_heap = BinaryHeap::new();
+
+13. BTreeMap and BTreeSet (from `std::collections`):
+    - Balanced binary search tree-based map and set.
+    - Example:
+      use std::collections::{BTreeMap, BTreeSet};
+      let mut my_btree_map = BtreeMap::new();
+      let mut my_btree_set = BTreeSet::new();
+
+14. HashSet and HashMap (from `std::collections`):
+  - Hash table-based set and map.
+  - Example:
+    use std::collections::{HashSet, HashMap};
+    let mut my_hash_set = HashSet::new();
+    let mut my_hash_map = HashMap::new();
+
+
+There are more data structures and containers in available in Rust.
+Rust emphasizes safety and ownership, and its data structures are 
+designed to prevent common programming errors such as pointer dereferences
+and data races. The choice of a specific data str
